@@ -31,7 +31,14 @@ $(btn_xhr).click(() =>
             console.log(joke);
 
             // JSON.parse the joke
-            // set the output // output id="output"
+            let parsedJoke = JSON.parse(joke);
+
+            // set the output
+            let outputElement = $('#output');
+
+            // Update the output with the parsed joke
+            outputElement.text(parsedJoke.joke);
+
         }
     }
     // send the request

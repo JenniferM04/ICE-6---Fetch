@@ -27,7 +27,12 @@ $(btn_fetch).click(() =>
         {
             // console log the json
             console.log(jsonRes);
-            // set the output // output id="output"
+
+            // set the output
+            let outputElement = $('#output');
+            
+            // Update the output with the received joke
+            outputElement.text(jsonRes.joke);
         })
 });
 
